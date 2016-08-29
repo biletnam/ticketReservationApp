@@ -39,3 +39,7 @@ buck-out/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
+
+.DS_Store
+.vscode
+tsconfig.json
