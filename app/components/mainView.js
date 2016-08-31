@@ -1,44 +1,43 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 import {
   StyleSheet,
-  Text,
-  View
+  Navigator
 } from 'react-native';
 
-export default class ticketReservation extends Component {
+import Store from 'ticketReservation/app/store';
+import Login from 'ticketReservation/app/components/login';
+
+export default class TicketReservation extends Component {  
+  constructor(){
+    super();
+
+  }
+  
+  renderScene(route, navigator){
+    if(route.title == 'Login'){
+      return <Login title={route.title} navigator={navigator} />
+    }
+  }
+  
   render() {
+    console.log('Root render');
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <Provider store={Store}>
+        <Navigator initialRoute={{ title : 'Login' }} renderScene={ this.renderScene } >
+        </Navigator>
+      </Provider>
     );
   }
 }
 
+
+
 const styles = StyleSheet.create({
-  container: {
+  navigator: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    backgroundColor: '#fff',
+  }
 });

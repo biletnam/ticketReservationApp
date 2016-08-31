@@ -6,7 +6,10 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
+    "path": "^0.12.7",
     "react": "15.3.1",
-    "react-native": "0.32.0"
+    "react-native": "0.32.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2"
   }
 }
