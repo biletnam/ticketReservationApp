@@ -43,3 +43,6 @@ android/keystores/debug.keystore
 .DS_Store
 .vscode
 tsconfig.json
+
+android/
+ios/
