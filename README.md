@@ -7,19 +7,19 @@ INSTALATION
 RUN PROJECT in DEV
 ------------------
 
-* On Android
-react-native run-android
+On Android
+* react-native run-android <br>
 
-* On ios
-react-native run-ios
+On ios
+* react-native run-ios <br>
 
 DEPLOY
 ------
 
-* For ios
+For ios
 
-There is xcode project in ios file
+* There is xcode project in ios file <br>
 
-* For Android
+For Android
 
-There is java project in android file
+* There is java project in android file <br>
