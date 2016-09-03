@@ -4,7 +4,8 @@ const initialState = {
     lol : 3,
     input : {
         email : 'nigga'
-    }
+    },
+    field : 'email'
 }
 
 export default function(state = initialState, action){
@@ -13,9 +14,9 @@ export default function(state = initialState, action){
         case 'input':
             newState.input[action.input] = action.text;
             return newState;
-        case 'send':
-            console.log('send');
-            newState.lol++;
+        case 'sendEmail':
+            console.log('Change state field -> code')
+            newState.field = 'code';
             return newState;
         default: 
             return state;

@@ -6,35 +6,28 @@ import {
   Text,
   View,
   TextInput,
-  Image,
-  TouchableHighlight,
-  StatusBar,
-  Navigator
+  TouchableHighlight
 } from 'react-native';
 
-
-import Email from 'ticketReservation/app/components/loginComponents/email';
-import Code from 'ticketReservation/app/components/loginComponents/code';
-
-class Login extends Component {
-  constructor(){
-    super();
+class Code extends Component {
+  redeem() {
+    this.props.navigator.push({
+      title : 'Home'
+    })
   }
-
   render() {
-    console.log('Render login');
-    let field;
-    if(this.props.field == 'email'){
-      field = <Email />;
-    } else if(this.props.field == 'code'){
-      field = <Code navigator={this.props.navigator}/>;
-    }
     return (
-      <Image style={styles.view} source={require('ticketReservation/res/images/loginScreenBackground.jpg')}>
-        <StatusBar backgroundColor="green" barStyle="light-content"/>
-        <Image style={styles.logo} source={require('ticketReservation/res/images/loginScreenLogo.png')}/>
-        {field}
-      </Image>
+        <View style={styles.loginField}>
+          <TextInput placeholder="code"style={styles.input}/>
+          <TouchableHighlight>
+            <Text onPress={this.redeem.bind(this)} style={styles.button}>
+              Redeem code
+            </Text>
+          </TouchableHighlight>
+          <Text style={styles.text}>
+            We sent you code.
+          </Text>
+        </View>
     );
   }
 }
@@ -104,5 +97,4 @@ const styles = {
   },
 }
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Code);

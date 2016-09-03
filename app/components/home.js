@@ -12,28 +12,17 @@ import {
   Navigator
 } from 'react-native';
 
-
-import Email from 'ticketReservation/app/components/loginComponents/email';
-import Code from 'ticketReservation/app/components/loginComponents/code';
-
-class Login extends Component {
+class Home extends Component {
   constructor(){
     super();
   }
 
   render() {
-    console.log('Render login');
-    let field;
-    if(this.props.field == 'email'){
-      field = <Email />;
-    } else if(this.props.field == 'code'){
-      field = <Code navigator={this.props.navigator}/>;
-    }
+    
     return (
       <Image style={styles.view} source={require('ticketReservation/res/images/loginScreenBackground.jpg')}>
         <StatusBar backgroundColor="green" barStyle="light-content"/>
         <Image style={styles.logo} source={require('ticketReservation/res/images/loginScreenLogo.png')}/>
-        {field}
       </Image>
     );
   }
@@ -105,4 +94,4 @@ const styles = {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

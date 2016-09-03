@@ -6,7 +6,10 @@ import {
 } from 'react-native';
 
 import Store from 'ticketReservation/app/store';
+
+// views
 import Login from 'ticketReservation/app/components/login';
+import Home from 'ticketReservation/app/components/home';
 
 export default class TicketReservation extends Component {  
   constructor(){
@@ -17,6 +20,8 @@ export default class TicketReservation extends Component {
   renderScene(route, navigator){
     if(route.title == 'Login'){
       return <Login title={route.title} navigator={navigator} />
+    } else if(route.title == 'Home'){
+      return <Home title={route.title} navigator={navigator} />
     }
   }
   

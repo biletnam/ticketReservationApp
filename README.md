@@ -2,7 +2,7 @@ INSTALATION
 -----------
 
 1. npm install
-2. react-native upgrade
+2. react-native upgrade (to install native projects)
 
 RUN PROJECT in DEV
 ------------------
