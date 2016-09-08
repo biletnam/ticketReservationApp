@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "devel-ios" : "react-native run-ios",
-    "devel-android" : "react-native run-android"
+    "devel-ios": "react-native run-ios",
+    "devel-android": "react-native run-android"
   },
   "dependencies": {
     "path": "^0.12.7",

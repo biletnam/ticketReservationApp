@@ -22,16 +22,20 @@ class Login extends Component {
   }
 
   render() {
+    
     console.log('Render login');
+
     let field;
     if(this.props.field == 'email'){
       field = <Email />;
     } else if(this.props.field == 'code'){
       field = <Code navigator={this.props.navigator}/>;
     }
+
+
     return (
       <Image style={styles.view} source={require('ticketReservation/res/images/loginScreenBackground.jpg')}>
-        <StatusBar backgroundColor="green" barStyle="light-content"/>
+        <StatusBar barStyle="light-content"/>
         <Image style={styles.logo} source={require('ticketReservation/res/images/loginScreenLogo.png')}/>
         {field}
       </Image>

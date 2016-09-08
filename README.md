@@ -2,7 +2,8 @@ INSTALATION
 -----------
 
 1. npm install
-2. react-native upgrade (to install native projects)
+2. react-native upgrade
+3. react-native android (install android project)
 
 RUN PROJECT in DEV
 ------------------
@@ -16,10 +17,4 @@ On ios
 DEPLOY
 ------
 
-For ios
-
-* There is xcode project in ios file <br>
-
-For Android
-
-* There is java project in android file <br>
+* There are projects in xcode and java project <br>
